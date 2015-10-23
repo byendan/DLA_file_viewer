@@ -1,0 +1,204 @@
+body {
+    background-color: #FAFAFA;
+    font-family: 'Roboto', sans-serif   
+}
+
+.jumbotron {
+    background-color: #E6F0F0;
+    height: 130px;
+    width: 100%;
+    position: absolute;
+}
+
+.jumbotron h1 {
+    position: relative;
+    text-align: center;
+    top: -40px;  
+    color: black;
+}
+
+.search-area {
+    position: relative;
+    top: 150px;
+    margin-left: 25%;
+}
+
+.search-area ul {
+    list-style-type: none;   
+}
+
+.search-area ul li {
+    display: inline-block;   
+}
+
+.search-button {
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    background-color: #55b0ff;
+    border: solid 1px black;
+}
+
+.search-button:hover {
+    background-color: #448DCC;   
+}
+
+.visible-search {
+    background-color: #e5e5e5;
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
+    border: solid 1px black;
+}
+
+.visible-search:hover {
+    background-color: #CECECE;
+}
+
+.results-area {
+    display: block;
+    position: relative;
+    top: 170px;
+    left: 15%;
+    height: 100%;
+    width: 50%;
+    margin: 20px;
+    border-radius: 5px;
+    border: solid 1px black;
+    background-color: #E9F2DE;   
+}
+
+
+.little-block {
+    width: 80%;
+    background-color: #88DD75;
+    padding: 10px;
+    border-radius: 5px;
+    margin:10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+}
+
+.little-block:hover {
+    background-color: #6DB15E;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.little-block-selected {
+    width: 85%;
+    background-color: #A0E491;
+    padding: 10px;
+    border-radius: 5px;
+    margin:10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.5);
+}
+
+.little-block-selected:hover {
+    background-color: #A0E491;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00ff3b;
+    -webkit-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 3px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+
+.button-side-nav {
+    position: absolute;
+    text-align: center;
+    top: 170px;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    background-color: #E9F2DE;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    border-color: black;
+    font-size: 20px;
+}
+
+.link-space {
+    position: absolute;
+    top: 167px;
+    width: 100%;
+    padding: 5px;
+    margin: 10px;
+    background-color: #E8E8E8;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.title-bar {
+    width: 95%;
+    padding: 5px;
+    margin: 0px;
+    background-color: #88DD75;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: #308F69;
+    -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
+    font-size: 35px;
+}
+
+.dir-bar {
+    width: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #84C9D1;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 3px;
+    cursor:pointer;
+}
+
+.dir-bar:hover {
+    background-color: #77B5BC;   
+}
+
+.file-bar {
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    background-color: #BDE6F0;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+
+    font-size: 20px;
+}
+
+.tabbed-bar {
+    margin-left: 35px;
+}
+
+.dropBox {
+    display: block;
+    height: 100%;
+    border: solid 1px black;
+}

@@ -1,0 +1,41 @@
+
+How to update the DLA web page:
+
+These instructions are for updating the DLA web page after adding files or folders to the dlas folder in xythos. That folder is located at Departments/LRC/computertutorlabonlineresources
+
+You must use a Mac to update the DLA page
+
+1. First Run the updatelda.rb file
+	
+	* This can be found at http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/DLACode/updatedla.rb
+
+	* Download the file and move it to an easy place to find.
+	  Prefereably the Desktop
+	
+	* Open the Terminal application
+		-You can find it with Spotlight 
+		 or in Applications/Utilities
+
+	* type: cd Desktop (assuming updatedla.rb is on the desktop)
+	  then hit return
+
+	* type: ruby updatedla.rb
+	  then hit return. The program may take a few seconds to run.
+
+	* A file called dlalinks.xml is now in the same folder as 
+	  updatedla.rb
+
+2. Updload dlalinks.xml to xythos
+
+	* Log into Xythos and navigate to Departments/LRC/computerlabonlineresources/DLACode
+
+	* Once you are inside the DLACode folder click Upload
+
+	* Add the file called dlalinks.xml
+
+	* Check the box labeled with "Overwrite file if it already exists."
+
+	* Now click the Start Upload button
+
+Finished:
+	You have now updated the DLA website
