@@ -19,7 +19,7 @@ body {
 
 .search-area {
     position: relative;
-    top: 150px;
+    top: 25px;
     margin-left: 25%;
 }
 
@@ -59,7 +59,7 @@ body {
 .results-area {
     display: block;
     position: relative;
-    top: 170px;
+    top: 50px;
     left: 15%;
     height: 100%;
     width: 50%;
@@ -124,7 +124,7 @@ body {
 .button-side-nav {
     position: absolute;
     text-align: center;
-    top: 170px;
+    top: 50px;
     width: 100%;
     padding: 5px;
     margin: 5px;
@@ -138,7 +138,7 @@ body {
 
 .link-space {
     position: absolute;
-    top: 167px;
+    top: 47px;
     width: 100%;
     padding: 5px;
     margin: 10px;
