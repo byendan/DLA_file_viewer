@@ -3,23 +3,14 @@ body {
     font-family: 'Roboto', sans-serif   
 }
 
-.jumbotron {
-    background-color: #E6F0F0;
-    height: 130px;
-    width: 100%;
-    position: absolute;
-}
-
-.jumbotron h1 {
-    position: relative;
-    text-align: center;
-    top: -40px;  
-    color: black;
+.navbar .navbar-text{
+    text-decoration: none;
+    color: white;
 }
 
 .search-area {
     position: relative;
-    top: 25px;
+    top: 10px;
     margin-left: 25%;
 }
 
@@ -59,7 +50,7 @@ body {
 .results-area {
     display: block;
     position: relative;
-    top: 50px;
+    top: 30px;
     left: 15%;
     height: 100%;
     width: 50%;
@@ -124,7 +115,7 @@ body {
 .button-side-nav {
     position: absolute;
     text-align: center;
-    top: 50px;
+    top: 30px;
     width: 100%;
     padding: 5px;
     margin: 5px;
@@ -138,7 +129,7 @@ body {
 
 .link-space {
     position: absolute;
-    top: 47px;
+    top: 27px;
     width: 100%;
     padding: 5px;
     margin: 10px;

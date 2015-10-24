@@ -3,6 +3,22 @@
 	<dir>
 		<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/</link>
 		<name>DLA</name>
+		<dir>
+			<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/</link>
+			<name>Test</name>
+			<dir>
+				<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/Testtwo/</link>
+				<name>Testtwo</name>
+				<file>
+					<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/Testtwo/dsps-lab-dla.doc</link>
+					<name>dsps-lab-dla.doc</name>
+				</file>
+			</dir>
+			<file>
+				<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/dsps-lab-dla.doc</link>
+				<name>dsps-lab-dla.doc</name>
+			</file>
+		</dir>
 		<file>
 			<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/a-dla.doc</link>
 			<name>a-dla.doc</name>

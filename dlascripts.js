@@ -39,10 +39,15 @@ function fill_files(cur_node, tabbed) {
 }
 
 // Fills the directory nodes of a directory
-function fill_dirs(cur_node) {
+function fill_dirs(cur_node, tabbed) {
     for(i = 0; i < cur_node.dirs.length; i++) {
         var dir_name = cur_node.dirs[i].name;
-        $('.' + cur_node.name.replace(/\s+/g, '')).append("<div class='" + dir_name.replace(/\s+/g, '') + "'><h2><div class='dir-bar'>" + dir_name + "<span class='arrow" + dir_name + " glyphicon glyphicon-circle-arrow-right pull-right'></span></div></h2></div>");
+        if (tabbed) {
+            $('.' + cur_node.name.replace(/\s+/g, '')).append("<div class='" + dir_name.replace(/\s+/g, '') + "'><h2><div class='dir-bar tabbed-bar files" + cur_node.name +"'>" + dir_name + "<span class='arrow" + dir_name + " glyphicon glyphicon-circle-arrow-right pull-right'></span></div></h2></div>");
+        } else {
+            $('.' + cur_node.name.replace(/\s+/g, '')).append("<div class='" + dir_name.replace(/\s+/g, '') + "'><h2><div class='dir-bar'>" + dir_name + "<span class='arrow" + dir_name + " glyphicon glyphicon-circle-arrow-right pull-right'></span></div></h2></div>");
+        }
+        
     }
 }
 
@@ -123,6 +128,30 @@ function drawSearch(title, matches) {
     
 }
  
+// Findes the dir that has been clicked
+function find_open_dir(cur_dir, text_match) {
+    var dir_count;
+    for(dir_count = 0; dir_count < cur_dir.dirs.length; dir_count++){
+        if( cur_dir.dirs[dir_count].name == text_match) {
+            return cur_dir.dirs[dir_count];   
+        } else {
+            if(cur_dir.dirs.length > 0) {
+                var temp_dir = find_open_dir(cur_dir.dirs[dir_count], text_match);
+                if(temp_dir != null) {
+                    return temp_dir;
+                }
+            }
+               
+                
+            
+        }
+    }
+    return null;
+}
+
+
+
+
 
 // Loads the xml file, and sets up buttons
 $(document).ready(function(){ 
@@ -212,12 +241,10 @@ $(document).ready(function(){
             var cur_node = top_nodes[index];
             if (cur_node.name == cur_block.text()) {
                 
-                for(j = 0; j < cur_node.dirs.length; j++) {
-                    var cur_dir = cur_node.dirs[j];
-                    
-                    if(cur_dir.name == $(this).text()) {
-                        
+                var cur_dir = find_open_dir(cur_node, $(this).text());
+                
                         if (!cur_dir.expanded){
+                            fill_dirs(cur_dir, true);
                             fill_files(cur_dir, true);
                             cur_dir.expanded = true;
                             $("." + cur_dir.name).css("border", "solid 1px black");
@@ -225,7 +252,7 @@ $(document).ready(function(){
                             $(".arrow" + cur_dir.name).toggleClass("glyphicon-circle-arrow-right");
                             $(".arrow" + cur_dir.name).toggleClass("glyphicon-circle-arrow-down");
                         } else {
-                            $(".drowdown-files").remove();
+                            
                             $(".files" + cur_dir.name).remove();
                             $(".dropBox").remove();
                             $("." + cur_dir.name).css("border", "none");
@@ -234,8 +261,7 @@ $(document).ready(function(){
                             $(".arrow" + cur_dir.name).toggleClass("glyphicon-circle-arrow-down");
                             cur_dir.expanded = false;
                         }
-                    }
-                }
+                   
                 break;
             }
         }
