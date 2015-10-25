@@ -24,12 +24,14 @@ function file_node(name, link, parent) {
 
 // Fills the file nodes of a directory node
 function fill_files(cur_node, tabbed) {
-    
+    if(tabbed) {
+           
+    }
     for(i = 0; i < cur_node.files.length; i++) {
         var fil_name = cur_node.files[i].name;
         var fil_link = cur_node.files[i].link;
         if (tabbed) {
-            $('.' + cur_node.name.replace(/\s+/g, '')).append("<div class='dropdown-files'><a target='_blank' href='" + fil_link + "'><div class='file-bar tabbed-bar files" + cur_node.name +"'>" + fil_name + "</div></a></div>");
+            $('.' + cur_node.name + "drop").append("<div class='dropdown-files" + cur_node.name + "'><a target='_blank' href='" + fil_link + "'><div class='file-bar tabbed-bar files" + cur_node.name +"'>" + fil_name + "</div></a></div>");
         } else {
             $('.' + cur_node.name.replace(/\s+/g, '')).append("<div class='dropdown-files'><a target='_blank' href='" + fil_link + "'><div class='file-bar files" + cur_node.name +"'>" + fil_name + "</div></a></div>");
         }
@@ -43,7 +45,7 @@ function fill_dirs(cur_node, tabbed) {
     for(i = 0; i < cur_node.dirs.length; i++) {
         var dir_name = cur_node.dirs[i].name;
         if (tabbed) {
-            $('.' + cur_node.name.replace(/\s+/g, '')).append("<div class='" + dir_name.replace(/\s+/g, '') + "'><h2><div class='dir-bar tabbed-bar files" + cur_node.name +"'>" + dir_name + "<span class='arrow" + dir_name + " glyphicon glyphicon-circle-arrow-right pull-right'></span></div></h2></div>");
+            $('.' + cur_node.name + "drop").append("<div class='" + dir_name.replace(/\s+/g, '') + "'><h2><div class='dir-bar tabbed-bar files" + cur_node.name +"'>" + dir_name + "<span class='arrow" + dir_name + " glyphicon glyphicon-circle-arrow-right pull-right'></span></div></h2></div>");
         } else {
             $('.' + cur_node.name.replace(/\s+/g, '')).append("<div class='" + dir_name.replace(/\s+/g, '') + "'><h2><div class='dir-bar'>" + dir_name + "<span class='arrow" + dir_name + " glyphicon glyphicon-circle-arrow-right pull-right'></span></div></h2></div>");
         }
@@ -83,8 +85,9 @@ function close_expansions(top_block) {
     for (block_dir = 0; block_dir < top_block.dirs.length; block_dir++) {
         if(top_block.dirs[block_dir].expanded) {
             top_block.dirs[block_dir].expanded = false;
-            $(".arrow" + top_block.dirs[block_dir].name).toggleClass("glyphicon-circle-arrow-right");
-            $(".arrow" + top_block.dirs[block_dir].name).toggleClass("glyphicon-circle-arrow-down");
+            $(".arrow" + top_block.dirs[block_dir].name).addClass("glyphicon-circle-arrow-right");
+            $(".arrow" + top_block.dirs[block_dir].name).removeClass("glyphicon-circle-arrow-down");
+            $("." + top_block.dirs[block_dir].name).removeClass("droppedDir");
         }
         
         if(top_block.dirs[block_dir].dirs.length > 0) {
@@ -141,9 +144,6 @@ function find_open_dir(cur_dir, text_match) {
                     return temp_dir;
                 }
             }
-               
-                
-            
         }
     }
     return null;
@@ -244,22 +244,21 @@ $(document).ready(function(){
                 var cur_dir = find_open_dir(cur_node, $(this).text());
                 
                         if (!cur_dir.expanded){
+                            $("." + cur_dir.name).append("<dir class='" + cur_dir.name + "drop'></dir>");
                             fill_dirs(cur_dir, true);
                             fill_files(cur_dir, true);
                             cur_dir.expanded = true;
-                            $("." + cur_dir.name).css("border", "solid 1px black");
-                            $("." + cur_dir.name).css("background-color", "#D1D1D1");
-                            $(".arrow" + cur_dir.name).toggleClass("glyphicon-circle-arrow-right");
-                            $(".arrow" + cur_dir.name).toggleClass("glyphicon-circle-arrow-down");
+                            $("." + cur_dir.name).addClass("droppedDir");
+                            $(".arrow" + cur_dir.name).removeClass("glyphicon-circle-arrow-right");
+                            $(".arrow" + cur_dir.name).addClass("glyphicon-circle-arrow-down");
                         } else {
-                            
-                            $(".files" + cur_dir.name).remove();
-                            $(".dropBox").remove();
-                            $("." + cur_dir.name).css("border", "none");
-                            $("." + cur_dir.name).css("background-color", "#E8E8E8");
-                            $(".arrow" + cur_dir.name).toggleClass("glyphicon-circle-arrow-right");
-                            $(".arrow" + cur_dir.name).toggleClass("glyphicon-circle-arrow-down");
+                            $("." + cur_dir.name + "drop").empty();
+                            $("." + cur_dir.name + "drop").remove();
+                            $("." + cur_dir.name).removeClass("droppedDir");
+                            $(".arrow" + cur_dir.name).addClass("glyphicon-circle-arrow-right");
+                            $(".arrow" + cur_dir.name).removeClass("glyphicon-circle-arrow-down");
                             cur_dir.expanded = false;
+                            close_expansion(cur_dir);
                         }
                    
                 break;

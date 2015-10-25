@@ -29,6 +29,7 @@ body {
     padding: 5px;
     background-color: #55b0ff;
     border: solid 1px black;
+    cursor:pointer;
 }
 
 .search-button:hover {
@@ -41,6 +42,7 @@ body {
     height: 30px;
     padding: 5px;
     border: solid 1px black;
+    cursor:pointer;
 }
 
 .visible-search:hover {
@@ -188,8 +190,12 @@ body {
     margin-left: 35px;
 }
 
-.dropBox {
-    display: block;
-    height: 100%;
+
+.droppedDir {
     border: solid 1px black;
+    background-color: #D1D1D1;
+    margin-left: 10px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
 }
