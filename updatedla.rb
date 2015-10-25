@@ -78,7 +78,7 @@ class LinkFinder
             depth_tab.call
             content << "\t<link>#{f}</link>"
             depth_tab.call
-            content << "\t<name>#{file_hash[f].to_s.slice(2..file_hash[f].to_s.length - 3)}</name>"
+            content << "\t<name>#{file_hash[f].to_s.slice(2..file_hash[f].to_s.length - 3).gsub(/%20/, " ")}</name>"
     
             depth_tab.call
             content << "</file>"  

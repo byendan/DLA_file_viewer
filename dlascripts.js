@@ -258,7 +258,7 @@ $(document).ready(function(){
                             $(".arrow" + cur_dir.name).addClass("glyphicon-circle-arrow-right");
                             $(".arrow" + cur_dir.name).removeClass("glyphicon-circle-arrow-down");
                             cur_dir.expanded = false;
-                            close_expansion(cur_dir);
+                            close_expansions(cur_dir);
                         }
                    
                 break;

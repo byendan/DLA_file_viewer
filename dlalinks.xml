@@ -7,6 +7,30 @@
 			<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/</link>
 			<name>Test</name>
 			<dir>
+				<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/bla/</link>
+				<name>bla</name>
+				<file>
+					<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/bla/updatedla.rb</link>
+					<name>updatedla.rb</name>
+				</file>
+			</dir>
+			<dir>
+				<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/da/</link>
+				<name>da</name>
+				<file>
+					<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/da/How%20to%20update%20DLA%20website.txt</link>
+					<name>How to update DLA website.txt</name>
+				</file>
+			</dir>
+			<dir>
+				<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/di/</link>
+				<name>di</name>
+				<file>
+					<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/di/dlastyles.css</link>
+					<name>dlastyles.css</name>
+				</file>
+			</dir>
+			<dir>
 				<link>http://wfs.sbcc.edu/Departments/LRC/computerlabonlineresources/dlas/DLA/Test/Testtwo/</link>
 				<name>Testtwo</name>
 				<file>
