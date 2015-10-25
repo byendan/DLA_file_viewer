@@ -1,6 +1,7 @@
 body {
     background-color: #FAFAFA;
-    font-family: 'Roboto', sans-serif   
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
 }
 
 .navbar .navbar-text{
