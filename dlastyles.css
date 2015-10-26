@@ -60,7 +60,7 @@ body {
     margin: 20px;
     border-radius: 5px;
     border: solid 1px black;
-    background-color: #E9F2DE;   
+    background-color: #E8E8E8;   
 }
 
 
@@ -136,7 +136,7 @@ body {
     width: 100%;
     padding: 5px;
     margin: 10px;
-    background-color: #E8E8E8;
+    background-color: #F6F6F6;
     border-radius: 2px;
     border-style: solid;
     border-width: 1px;
@@ -146,11 +146,12 @@ body {
     width: 95%;
     padding: 5px;
     margin: 0px;
-    background-color: #88DD75;
+    background-color: #E9F2DE;
+
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
-    border-color: #308F69;
+    border-color: #323232;
     -webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.75);
@@ -161,7 +162,8 @@ body {
     width: 50%;
     padding: 10px;
     margin-left: 10px;
-    background-color: #84C9D1;
+    margin-top: 3px;
+    background-color: #CEE9ED;
     border-style: solid;
     border-width: 1px;
     border-color: black;
@@ -177,7 +179,7 @@ body {
     width: 40%;
     padding: 10px;
     margin: 10px;
-    background-color: #BDE6F0;
+    background-color: #EBF8FA;
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
@@ -194,9 +196,9 @@ body {
 
 .droppedDir {
     border: solid 1px black;
-    background-color: #D1D1D1;
+    background-color: #E8E8E8;
     margin-left: 10px;
-    width: 80%;
+    width: 95%;
     padding: 10px;
     border-radius: 5px;
 }
