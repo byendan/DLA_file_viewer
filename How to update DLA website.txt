@@ -1,6 +1,11 @@
 
 How to update the DLA web page:
 
+Detailed Instructions with nice formatting and pictures can be found at
+
+https://sites.google.com/a/pipeline.sbcc.edu/lrc-computer-lab-most-common-questions/update-dla-website
+
+
 These instructions are for updating the DLA web page after adding files or folders to the dlas folder in xythos. That folder is located at Departments/LRC/computertutorlabonlineresources
 
 You must use a Mac to update the DLA page
